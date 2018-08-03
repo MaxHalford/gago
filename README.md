@@ -1,51 +1,4 @@
-<div align="center">
-  <!-- Logo -->
-  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRzNhZcghWl-xRaynEAQn4moZeyh6pmD8helS099eJ7V_TRGM9dE6e0T5IF9bOG7S4K62CKZtSUpans/pub?w=477&h=307" alt="logo"/>
-</div>
-
-<div align="center">
-  <!-- Awesome Go -->
-  <a href="https://github.com/avelino/awesome-go">
-    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome_go" />
-  </a>
-  <!-- Awesome Machine Learning -->
-  <a href="https://github.com/josephmisiti/awesome-machine-learning">
-    <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome_ml" />
-  </a>
-</div>
-
-<br/>
-
-<div align="center">
-  <!-- godoc -->
-  <a href="https://godoc.org/github.com/MaxHalford/gago">
-    <img src="https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square" alt="godoc" />
-  </a>
-  <!-- Build status -->
-  <a href="https://travis-ci.org/MaxHalford/gago">
-    <img src="https://img.shields.io/travis/MaxHalford/gago/master.svg?style=flat-square" alt="build_status" />
-  </a>
-  <!-- Test coverage -->
-  <a href="https://coveralls.io/github/MaxHalford/gago?branch=master">
-    <img src="https://coveralls.io/repos/github/MaxHalford/gago/badge.svg?branch=master&style=flat-square" alt="test_coverage" />
-  </a>
-  <!-- Go report card -->
-  <a href="https://goreportcard.com/report/github.com/MaxHalford/gago">
-    <img src="https://goreportcard.com/badge/github.com/MaxHalford/gago?style=flat-square" alt="go_report_card" />
-  </a>
-  <!-- Code Climate -->
-  <a href="https://codeclimate.com/github/MaxHalford/gago">
-    <img src="https://codeclimate.com/github/MaxHalford/gago/badges/gpa.svg" alt="Code Climate" />
-  </a>
-  <!-- License -->
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="http://img.shields.io/:license-mit-ff69b4.svg?style=flat-square" alt="license"/>
-  </a>
-</div>
-
-<br/>
-
-<div align="center">An extensible toolkit for conceiving and running genetic algorithms</div>
+:warning: This is gago, the old version of [eaopt](https://github.com/MaxHalford/eaopt). The repository only exists so that existing projects importing gago won't break. Please use [eaopt](https://github.com/MaxHalford/eaopt) if you're starting a new project or switch to it if your project is using it.
 
 <br/>
 
@@ -75,8 +28,8 @@
 The following example attempts to minimize the [Drop-Wave function](https://www.sfu.ca/~ssurjano/drop.html) which is known to have a minimum value of -1.
 
 <div align="center">
-  <img src="https://github.com/MaxHalford/gago-examples/blob/master/drop_wave/chart.png" alt="drop_wave_chart" />
-  <img src="https://github.com/MaxHalford/gago-examples/blob/master/drop_wave/function.png" alt="drop_wave_function" />
+  <img src="https://github.com/MaxHalford/eaopt-examples/blob/master/drop_wave/chart.png" alt="drop_wave_chart" />
+  <img src="https://github.com/MaxHalford/eaopt-examples/blob/master/drop_wave/function.png" alt="drop_wave_function" />
 </div>
 
 ```go
@@ -155,14 +108,14 @@ func main() {
 
 **More examples**
 
-All the examples can be found [here](https://github.com/MaxHalford/gago-examples).
+All the examples can be found [here](https://github.com/MaxHalford/eaopt-examples).
 
-- [Cross-in-Tray (speciation)](https://github.com/MaxHalford/gago-examples/tree/master/cross_in_tray)
-- [Grid TSP](https://github.com/MaxHalford/gago-examples/tree/master/tsp_grid)
-- [Including a constraint](https://github.com/MaxHalford/gago-examples/tree/master/constraint)
-- [One Max problem](https://github.com/MaxHalford/gago-examples/tree/master/one_max)
-- [N-queens problem](https://github.com/MaxHalford/gago-examples/tree/master/n_queens)
-- [String matching](https://github.com/MaxHalford/gago-examples/tree/master/string_matching)
+- [Cross-in-Tray (speciation)](https://github.com/MaxHalford/eaopt-examples/tree/master/cross_in_tray)
+- [Grid TSP](https://github.com/MaxHalford/eaopt-examples/tree/master/tsp_grid)
+- [Including a constraint](https://github.com/MaxHalford/eaopt-examples/tree/master/constraint)
+- [One Max problem](https://github.com/MaxHalford/eaopt-examples/tree/master/one_max)
+- [N-queens problem](https://github.com/MaxHalford/eaopt-examples/tree/master/n_queens)
+- [String matching](https://github.com/MaxHalford/eaopt-examples/tree/master/string_matching)
 
 ## Background
 
@@ -256,7 +209,7 @@ type Slice interface {
 }
 ```
 
-Internally `IntSlice`, `Float64Slice` and `StringSlice` implement this interface so that you can use the available operators for most use cases. If however you wish to use the operators which slices of a different type you will have to implement the `Slice` interface. Although there are many methods to implement, they are all trivial (have a look at [`slice.go`](slice.go) and the [TSP example](https://github.com/MaxHalford/gago-examples/tree/master/tsp_grid).
+Internally `IntSlice`, `Float64Slice` and `StringSlice` implement this interface so that you can use the available operators for most use cases. If however you wish to use the operators which slices of a different type you will have to implement the `Slice` interface. Although there are many methods to implement, they are all trivial (have a look at [`slice.go`](slice.go) and the [TSP example](https://github.com/MaxHalford/eaopt-examples/tree/master/tsp_grid).
 
 
 ### Instantiating a GA struct
